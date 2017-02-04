@@ -1,0 +1,29 @@
+{
+    "name": "orgmanager/orgmanager-custom",
+    "description": "Custom Scripts created for Orgmanager",
+    "keywords": [
+        "orgmanager",
+        "orgmanager-custom"
+    ],
+    "homepage": "https://github.com/orgmanager/orgmanager-custom",
+    "license": "AGPLv3",
+    "authors": [
+        {
+            "name": "Miguel Piedrafita",
+            "email": "soy@miguelpiedrafita.com",
+            "homepage": "https://miguelpiedrafita.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "OrgManager\\OrgmanagerCustom\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
