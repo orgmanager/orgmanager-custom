@@ -14,7 +14,7 @@ class InviteToOrgmanager extends Command
      *
      * @var string
      */
-    protected $signature = 'orgmanager:invitetoorg';
+    protected $signature = 'orgmanager-custom:inviteusers';
 
     /**
      * The console command description.

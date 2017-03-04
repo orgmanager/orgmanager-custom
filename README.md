@@ -4,22 +4,34 @@
 [![Software License](https://img.shields.io/badge/license-AGPLv3-blue.svg?style=flat-square)](LICENSE.md)
 [![Total Downloads](https://img.shields.io/packagist/dt/orgmanager/orgmanager-custom.svg?style=flat-square)](https://packagist.org/packages/orgmanager/orgmanager-custom)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+Here you can find custom scripts created for the Orgmanager Hosted version needs.
 
 ## Installation
 
-You can install the package via composer:
+You can pull in the package via composer:
 
 ``` bash
 composer require orgmanager/orgmanager-custom
 ```
 
-## Usage
+Next up, the service provider must be registered:
 
-``` php
-$skeleton = new M1guelpf\Skeleton();
-echo $skeleton->echoPhrase('Hello, OrgManager');
+```php
+// config/app.php
+'providers' => [
+    ...
+    OrgManager\OrgmanagerCustom\OrgmanagerCustomServiceProvider::class,
+
+];
 ```
+## Commands
+
+- Invite To Org command
+
+```sh
+php artisan orgmanager-custom:inviteusers
+```
+Used to periodically invite all the OrgManager users to the OrgManager organization.
 
 ## Changelog
 

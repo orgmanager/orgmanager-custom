@@ -4,7 +4,7 @@ namespace OrgManager\OrgmanagerCustom;
 
 use Illuminate\Support\ServiceProvider;
 use OrgManager\OrgmanagerCustom\InviteToOrgmanager;
-class SkeletonServiceProvider extends ServiceProvider
+class OrgmanagerCustomServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -12,9 +12,10 @@ class SkeletonServiceProvider extends ServiceProvider
     public function boot()
     {
       if ($this->app->runningInConsole()) {
-      $this->commands([
-          InviteToOrgmanager::class,
-      ]);
+        $this->commands([
+            InviteToOrgmanager::class,
+        ]);
+      }
     }
 
     /**
