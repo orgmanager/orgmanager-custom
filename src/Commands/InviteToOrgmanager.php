@@ -2,9 +2,9 @@
 
 namespace OrgManager\OrgmanagerCustom;
 
-use App\User;
-use App\Org;
 use GitHub;
+use App\Org;
+use App\User;
 use Illuminate\Console\Command;
 
 class InviteToOrgmanager extends Command
@@ -46,12 +46,12 @@ class InviteToOrgmanager extends Command
         if ($this->confirm('Do you invite '.$total.' users?')) {
             $this->output->progressStart($total);
             foreach ($users as $user) {
-            if (!$this->checkMembership($org, $user->github_username)) {
-                $this->call('orgmanager:joinorg', [
+                if (! $this->checkMembership($org, $user->github_username)) {
+                    $this->call('orgmanager:joinorg', [
                     'org'      => $org->id,
                    'username' => $user->github_username,
                  ]);
-}
+                }
                 $this->output->progressAdvance();
             }
             $this->output->progressFinish();
@@ -59,7 +59,7 @@ class InviteToOrgmanager extends Command
         }
     }
 
-protected function checkMembership(Org $org, $username)
+    protected function checkMembership(Org $org, $username)
     {
         Github::authenticate($org->user->token, null, 'http_token');
         try {
@@ -69,5 +69,5 @@ protected function checkMembership(Org $org, $username)
         }
 
         return true;
-}
+    }
 }

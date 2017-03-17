@@ -3,7 +3,7 @@
 namespace OrgManager\OrgmanagerCustom;
 
 use Illuminate\Support\ServiceProvider;
-use OrgManager\OrgmanagerCustom\InviteToOrgmanager;
+
 class OrgmanagerCustomServiceProvider extends ServiceProvider
 {
     /**
@@ -11,11 +11,11 @@ class OrgmanagerCustomServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-      if ($this->app->runningInConsole()) {
-        $this->commands([
+        if ($this->app->runningInConsole()) {
+            $this->commands([
             InviteToOrgmanager::class,
         ]);
-      }
+        }
     }
 
     /**
