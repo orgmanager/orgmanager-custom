@@ -14,6 +14,7 @@ class OrgmanagerCustomServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
             InviteToOrgmanager::class,
+            ListUsers::class,
         ]);
         }
     }
