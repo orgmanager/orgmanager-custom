@@ -40,6 +40,13 @@ php artisan orgmanager-custom:listusers
 ```
 Used to print a table of the users registered on OrgManager.
 
+- List Orgs command
+
+```sh
+php artisan orgmanager-custom:listorgs
+```
+Used to print a table of the organizations registered on OrgManager.
+
 
 ## Changelog
 
