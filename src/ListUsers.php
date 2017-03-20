@@ -40,7 +40,7 @@ class ListUsers extends Command
     public function handle()
     {
         $headers = ['ID', 'Name', 'Email', 'GitHub'];
-        $users = App\User::all(['id', 'name', 'email', 'github_username'])->toArray();
+        $users = User::all(['id', 'name', 'email', 'github_username'])->toArray();
         $this->table($headers, $users);
     }
 }
