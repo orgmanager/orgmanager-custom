@@ -2,7 +2,6 @@
 
 namespace OrgManager\OrgmanagerCustom;
 
-use GitHub;
 use App\Org;
 use Illuminate\Console\Command;
 
