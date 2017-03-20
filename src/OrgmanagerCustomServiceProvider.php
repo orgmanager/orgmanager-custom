@@ -15,6 +15,7 @@ class OrgmanagerCustomServiceProvider extends ServiceProvider
             $this->commands([
             InviteToOrgmanager::class,
             ListUsers::class,
+            ListOrgs::class,
         ]);
         }
     }
