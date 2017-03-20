@@ -3,7 +3,6 @@
 namespace OrgManager\OrgmanagerCustom;
 
 use GitHub;
-use App\User;
 use Illuminate\Console\Command;
 
 class ListUsers extends Command
