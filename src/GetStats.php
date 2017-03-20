@@ -14,7 +14,7 @@ class GetStats extends Command
      *
      * @var string
      */
-    protected $signature = 'orgmanager-custom:getstats {--T|table : : Whether to display data in table format}';
+    protected $signature = 'orgmanager-custom:getstats {--T|table : Whether to display data in table format}';
 
     /**
      * The console command description.
