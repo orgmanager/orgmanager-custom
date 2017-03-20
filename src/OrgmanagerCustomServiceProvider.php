@@ -16,6 +16,7 @@ class OrgmanagerCustomServiceProvider extends ServiceProvider
             InviteToOrgmanager::class,
             ListUsers::class,
             ListOrgs::class,
+            GetStats::class,
         ]);
         }
     }
