@@ -2,9 +2,8 @@
 
 namespace OrgManager\OrgmanagerCustom;
 
-use GitHub;
-use App\User;
 use App\Org;
+use App\User;
 use Illuminate\Console\Command;
 
 class GetStats extends Command
@@ -40,17 +39,15 @@ class GetStats extends Command
      */
     public function handle()
     {
-      if ($this->option('table'))
-      {
-        $headers = ['Users', 'Organizations', 'Invites'];
-        $stats = array();
-        $stats = [[User::count(), Org::count(), Org::sum('invitecount')]];
-        $this->table($headers, $stats);
-      } else
-      {
-        $this->info('Users: '.User::count());
-        $this->info('Orgs: '.Org::count());
-        $this->info('Invites: '.Org::sum('invitecount'));
-      }
+        if ($this->option('table')) {
+            $headers = ['Users', 'Organizations', 'Invites'];
+            $stats = [];
+            $stats = [[User::count(), Org::count(), Org::sum('invitecount')]];
+            $this->table($headers, $stats);
+        } else {
+            $this->info('Users: '.User::count());
+            $this->info('Orgs: '.Org::count());
+            $this->info('Invites: '.Org::sum('invitecount'));
+        }
     }
 }
