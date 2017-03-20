@@ -47,6 +47,13 @@ php artisan orgmanager-custom:listorgs
 ```
 Used to print a table of the organizations registered on OrgManager.
 
+- Get Stats command
+
+```sh
+php artisan orgmanager-custom:getstats (-T | --table)
+```
+Used to print the stats in plain text (or in a table format when using `-T`).
+
 
 ## Changelog
 
